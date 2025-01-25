@@ -3,7 +3,7 @@ import Input from "@/components/Input";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const ResetPassword = () => {
   return (
     <div className="">
       <div className="flex flex-col items-center justify-center min-h-[80vh]">
@@ -26,7 +26,7 @@ const page = () => {
         </div>
         <div>
           <span className="font-Syne font-normal text-base leading-6">
-            Did't get the code?
+            Didn&apos;t get the code?
           </span>
           <Link
             href={"/signin"}
@@ -40,4 +40,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ResetPassword;

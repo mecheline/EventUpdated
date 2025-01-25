@@ -5,19 +5,20 @@ import Input from "@/components/Input";
 import { useSignIn } from "@clerk/nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import { FormEvent, useState } from "react";
 
-const page = () => {
+
+const Signin = () => {
   const { isLoaded, signIn, setActive } = useSignIn();
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [code, setCode] = React.useState("");
-  const [useBackupCode, setUseBackupCode] = React.useState(false);
-  const [displayTOTP, setDisplayTOTP] = React.useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [code, setCode] = useState("");
+  const [useBackupCode, setUseBackupCode] = useState(false);
+  const [displayTOTP, setDisplayTOTP] = useState(false);
   const router = useRouter();
 
   // Handle user submitting email and pass and swapping to TOTP form
-  const handleFirstStage = (e: React.FormEvent) => {
+  const handleFirstStage = (e: FormEvent) => {
     e.preventDefault();
     setDisplayTOTP(true);
   };
@@ -161,4 +162,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Signin;

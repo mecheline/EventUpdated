@@ -7,7 +7,7 @@ import { useSignUp } from "@clerk/clerk-react";
 import { FormEvent, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-const page = () => {
+const Signup = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
   const [username, setUsername] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
@@ -178,7 +178,7 @@ const page = () => {
             Already have an account?
           </span>
           <Link
-            href={"/signin"}
+            href={"/sign-in"}
             className="font-Syne font-normal text-base leading-6 text-primary ml-2"
           >
             Sign In
@@ -189,4 +189,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Signup;
