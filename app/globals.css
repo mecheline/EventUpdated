@@ -1,8 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer base {
+  html,
+  body {
+    font-family: theme("fontFamily.CDV");
+  }
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,4 +28,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */

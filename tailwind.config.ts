@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#E40D7D",
+      },
+      fontFamily: {
+        CDV: ["Clash Display", "sans-serif"],
+        Syne: ["Syne", "serif"],
       },
     },
   },
